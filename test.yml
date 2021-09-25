@@ -1,4 +1,5 @@
-- name: Creates directory
-  file:
-    path: /src/www
-    state: directory
+- name: Gather ec2 facts
+  ec2_metadata_facts:
+- name: install apache on redhat or centos instances
+  yum: name=httpd state=present
+  when: ansible_os_family == "RedHat"
