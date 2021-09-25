@@ -1,4 +1,4 @@
-- hosts: nagios
+- hosts: all
   become: yes
   tasks:
       - name: Creates directory
