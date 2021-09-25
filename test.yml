@@ -1,4 +1,4 @@
-- name: install the latest version of Apache
-  yum:
-    name: httpd
-    state: latest
+- name: Creates directory
+  file:
+    path: /home/ec2-user/test
+    state: directory
