@@ -5,3 +5,6 @@
         file:
           path: /home/ec2-user/test
           state: directory
+      - name: install apache on redhat or centos instances
+        yum: name=httpd state=present
+        when: ansible_os_family == "RedHat"
