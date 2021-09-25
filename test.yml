@@ -1,4 +1,7 @@
-- name: Creates directory
-  file:
-    path: /home/ec2-user/test
-    state: directory
+- hosts: nagios
+  become: yes
+  tasks:
+      - name: Creates directory
+        file:
+          path: /home/ec2-user/test
+          state: directory
